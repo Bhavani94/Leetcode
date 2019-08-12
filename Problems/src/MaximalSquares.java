@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MaximalSquares {
    private static int maximalSquare(char[][] matrix) {
       if(matrix == null || matrix.length == 0)
@@ -15,6 +17,9 @@ public class MaximalSquares {
             }
          }
       }
+
+      for(int i = 0; i < m + 1; i++)
+         System.out.println(Arrays.toString(count[i]));
       return result * result;
    }
 

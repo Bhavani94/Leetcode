@@ -1,5 +1,5 @@
 public class LinkedListNthNode {
-   public static ListNode removeNthFromEnd(ListNode head, int n) {
+   private static ListNode removeNthFromEnd(ListNode head, int n) {
       if(head == null)
          return null;
 

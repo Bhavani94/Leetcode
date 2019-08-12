@@ -7,7 +7,7 @@ public class DisappearedNumbers {
             return new ArrayList<>();
         if(nums.length == 1 && nums[0] == 1)
             return new ArrayList<>();
-        for(int i = 0; i< nums.length; i++) {
+        for(int i = 0; i < nums.length; i++) {
             int a = Math.abs(nums[i]);
             if(a == nums.length)
                 nums[0] = -Math.abs(nums[0]);

@@ -1,5 +1,5 @@
 public class LinkedListPalindrome {
-    public static boolean isPalindrome(ListNode head) {
+    private static boolean isPalindrome(ListNode head) {
         if(head == null)
             return true;
         ListNode slow = head;

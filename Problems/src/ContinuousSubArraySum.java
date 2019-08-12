@@ -27,6 +27,7 @@ public class ContinuousSubArraySum {
 
     public static void main(String[] args) {
         System.out.println(checkSubarraySum(new int[]{23, 2, 4, 6, 7}, 6));
+        System.out.println(checkSubarraySum(new int[]{6, 6}, 6));
         System.out.println(checkSubarraySum(null, 6));
     }
 }

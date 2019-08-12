@@ -1,6 +1,7 @@
 public class MinAbsoluteDiffBST {
    static int min = Integer.MAX_VALUE, val = -1;
    private static int getMinimumDifference(TreeNode root) {
+      // inorder gives sorted array
       if(root != null) {
          if(root.left != null)
             getMinimumDifference(root.left);

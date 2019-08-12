@@ -28,6 +28,29 @@ public class LevelOrderTraversal {
       return result;
    }
 
+   private static List<List<Integer>> levelOrderBottom(TreeNode root) {
+      if(root == null)
+         return null;
+      LinkedList<List<Integer>> result = new LinkedList<>();
+      Queue<TreeNode> queue = new LinkedList<>();
+      queue.add(root);
+
+      while(!queue.isEmpty()) {
+         int size = queue.size();
+         List<Integer> level = new ArrayList<>();
+         for(int i = 0; i < size; i++) {
+            TreeNode node = queue.poll();
+            level.add(node.val);
+            if(node.left != null)
+               queue.offer(node.left);
+            if(node.right != null)
+               queue.offer(node.right);
+         }
+         result.addFirst(level);
+      }
+      return result;
+   }
+
    public static void main(String[] args) {
       TreeNode root = new TreeNode(5);
       root.left = new TreeNode(3);
@@ -35,5 +58,6 @@ public class LevelOrderTraversal {
       root.left.right = new TreeNode(4);
       root.left.left = new TreeNode(2);
       System.out.println(levelOrder(root));
+      System.out.println(levelOrderBottom(root));
    }
 }

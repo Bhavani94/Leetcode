@@ -1,5 +1,5 @@
 public class MergeSortedArray {
-    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+    private static void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = nums1.length - 1;
         m--;
         n--;

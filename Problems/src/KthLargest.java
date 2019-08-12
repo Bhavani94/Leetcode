@@ -1,7 +1,9 @@
 import java.util.PriorityQueue;
 
 public class KthLargest {
-    public static int findKthLargest(int[] nums, int k) {
+    private static int findKthLargest(int[] nums, int k) {
+        if(nums.length < k || k == 0)
+            return 0;
         PriorityQueue<Integer> pq = new PriorityQueue<>(k);
         for(int i : nums){
             pq.add(i);
@@ -11,7 +13,7 @@ public class KthLargest {
         return pq.peek();
     }
 
-    public static int thirdMax(int[] nums) {
+    private static int thirdMax(int[] nums) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for(int i : nums){
             if(!pq.contains(i)) {

@@ -27,6 +27,7 @@ public class KillProcess {
          Set<Integer> t = map.get(temp.poll());
          if(t != null) {
             ans.addAll(t);
+            temp.addAll(t);
          }
       }
       return ans;

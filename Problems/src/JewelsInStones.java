@@ -1,5 +1,5 @@
 public class JewelsInStones {
-    public static int numJewelsInStones(String J, String S) {
+    private static int numJewelsInStones(String J, String S) {
         int ans = 0;
         for(char c : S.toCharArray()){
             if(J.contains(Character.toString(c)))

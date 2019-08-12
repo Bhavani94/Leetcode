@@ -17,5 +17,6 @@ public class LongestContinuousIncreasing {
 
    public static void main(String[] args) {
       System.out.println(findLengthOfLCIS(new int[]{1,3,5,4,7}));
+      System.out.println(findLengthOfLCIS(new int[]{1,3,6,4,5,}));
    }
 }

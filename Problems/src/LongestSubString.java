@@ -2,7 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LongestSubString {
-    public static int lengthOfLongestSubstring(String s) {
+    // lengthOfLongestSubstring without repeating characters
+    private static int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character
         // try to extend the range [i, j]
@@ -16,7 +17,7 @@ public class LongestSubString {
         return ans;
     }
 
-    public static String longestPalindrome(String s) {
+    private static String longestPalindrome(String s) {
         String longest = "";
         for(int i = 0; i < s.length(); i++){
             String temp1 = find(s, i , i);
@@ -38,6 +39,6 @@ public class LongestSubString {
 
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("abcdedgh"));
-        //System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("babad"));
     }
 }

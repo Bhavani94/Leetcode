@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class KFrequent {
-    public static List<Integer> topKFrequent(int[] nums, int k) {
+    private static List<Integer> topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for(int i: nums){
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
-        Queue<Integer> pq = new PriorityQueue<Integer>(new Comparator<Integer>() {
+        Queue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
                 return map.get(o1) - map.get(o2);
@@ -27,7 +27,7 @@ public class KFrequent {
         return list;
     }
 
-    public static List<String> topKFrequent(String[] words, int k) {
+    private static List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> map = new HashMap<>();
         for(String i: words){
             map.put(i, map.getOrDefault(i, 0) + 1);

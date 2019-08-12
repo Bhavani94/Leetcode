@@ -21,9 +21,9 @@ public class DeepCopyLinkedList {
         // A->A->B->B->C->C->D->D
         // no random pointer copied
         while(current != null) {
-            Node temp = current.next;
-            current.next = new Node(current.val, temp, null);
-            current = temp;
+            Node next = current.next;
+            current.next = new Node(current.val, next, null);
+            current = next;
         }
 
         // assign random

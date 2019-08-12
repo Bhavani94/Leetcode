@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class FindOverlap {
-    public static String[] findRestaurant(String[] list1, String[] list2) {
+    private static String[] findRestaurant(String[] list1, String[] list2) {
         Map<String, Integer> map = new HashMap<>();
         List<String> ans = new ArrayList<>();
         int minIndexSum = Integer.MAX_VALUE;

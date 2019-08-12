@@ -1,9 +1,10 @@
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class KClosest {
-    public int[][] findKClosest(int[][] points, int K) {
+    private int[][] findKClosest(int[][] points, int K) {
         if(points == null || points.length == 0)
             return new int[K][];
         if(points.length <= K)
@@ -32,22 +33,16 @@ public class KClosest {
     public static void main(String[] args) {
         int[][] points = new int[][]{{3,3}, {5,-1}, {-2,4}};
         KClosest k = new KClosest();
-//        int[][] t =  k.findKClosest(points, 2);
-//        for(int i =0; i<t.length; i++){
-//            for(int j=0; j<t[i].length; j++){
-//                System.out.print(t[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
+        int[][] t =  k.findKClosest(points, 2);
+        for(int i = 0; i < t.length; i++){
+            System.out.println(Arrays.toString(t[i]));
+        }
 
         points = new int[][]{{68,97},{34,-84},{60,100},{2,31},{-27,-38},{-73,-74},{-55,-39},{62,91},{62,92},{-57,-67}};
-        int[][] t = k.findKClosest(points, 5);
+        t = k.findKClosest(points, 5);
 
-        for(int i =0; i<t.length; i++){
-            for(int j=0; j<t[i].length; j++){
-                System.out.print(t[i][j] + " ");
-            }
-            System.out.println();
+        for(int i =0; i< t.length; i++){
+            System.out.println(Arrays.toString(t[i]));
         }
     }
 }

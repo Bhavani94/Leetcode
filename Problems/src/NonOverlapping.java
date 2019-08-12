@@ -6,7 +6,7 @@ public class NonOverlapping {
    Given a collection of intervals, find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
     */
    private static int eraseOverlapIntervals(int[][] intervals) {
-      // O(nlogn) O(n) space //faster
+      // O(nlogn) O(n) space
       if(intervals == null || intervals.length == 0)
          return 0;
 
@@ -44,7 +44,7 @@ public class NonOverlapping {
    }
 
    public static void main(String[] args) {
-      System.out.println(eraseOverlapIntervals(new int[][]{{1,2}, {2,3}, {3,4}, {1,3}}));
+//      System.out.println(eraseOverlapIntervals(new int[][]{{1,2}, {2,3}, {3,4}, {1,3}}));
       System.out.println(eraseOverlapIntervals1(new int[][]{{1,2}, {2,3}, {3,4}, {1,3}}));
    }
 }

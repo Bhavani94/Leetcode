@@ -1,5 +1,5 @@
 public class Islands {
-    public static int numIslands(char[][] grid) {
+    private static int numIslands(char[][] grid) {
         if(grid == null || grid.length == 0) {
             return 0;
         }
@@ -28,7 +28,7 @@ public class Islands {
         visitIsland(grid, i , j - 1);
     }
 
-    public static int maxAreaOfIsland(int[][] grid) {
+    private static int maxAreaOfIsland(int[][] grid) {
         if(grid == null || grid.length == 0) {
             return 0;
         }
@@ -54,7 +54,7 @@ public class Islands {
     }
 
 
-    public static int islandPerimeter(int[][] grid) {
+    private static int islandPerimeter(int[][] grid) {
         if(grid == null || grid.length == 0) {
             return 0;
         }
@@ -82,7 +82,7 @@ public class Islands {
                                                     {'1', '1', '0', '0', '0'},
                                                     {'0', '0', '0', '0', '0'} }));
         System.out.println(numIslands(new char[][]{ {'1', '1', '1', '1'},
-                                                    {'0', '1', '0', '0'},
+                                                    {'0', '0', '0', '0'},
                                                     {'1', '1', '1', '1'} }));
 
         System.out.println(maxAreaOfIsland(new int[][]{ {1, 1, 1, 1},

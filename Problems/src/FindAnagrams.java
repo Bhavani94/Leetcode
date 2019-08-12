@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FindAnagrams {
-   public static List<Integer> findAnagrams(String s, String t) {
+   private static List<Integer> findAnagrams(String s, String t) {
       List<Integer> result = new LinkedList<>();
       if (t.length() > s.length())
          return result;

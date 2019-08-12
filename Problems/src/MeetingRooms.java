@@ -17,6 +17,7 @@ public class MeetingRooms {
 
       int endInd = 0;
       for(int i = 0; i < n; i++) {
+         // this meeting started before another meeting ended
          if(start[i] < end[endInd])
             count++;
          else

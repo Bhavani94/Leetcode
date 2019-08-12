@@ -20,8 +20,8 @@ public class PathsFromSourceToTarget {
       if(index == graph.length - 1) {
          result.add(new ArrayList<>(list));
       } else {
-         for(int element : graph[index]) {
-            allPathsSourceTargetHelper(graph, list, result, element);
+         for(int neighbour : graph[index]) {
+            allPathsSourceTargetHelper(graph, list, result, neighbour);
             list.remove(list.size() - 1);
          }
       }

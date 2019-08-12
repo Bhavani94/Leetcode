@@ -13,7 +13,7 @@ public class MostCommonWord {
 
         for(String word : words) {
             StringBuilder sb = new StringBuilder();
-            int value = 0;
+            int value;
             for(char c : word.toCharArray()) {
                 if(!Character.isLetter(c)) {
                     break;

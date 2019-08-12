@@ -3,7 +3,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DegreeArray {
-    public static int findShortestSubArray(int[] nums) {
+    /*
+    degree of this array is defined as the maximum frequency of any one of its elements.
+    find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
+     */
+    private static int findShortestSubArray(int[] nums) {
         Map<Integer, Integer> left = new HashMap<>();
         Map<Integer, Integer> right = new HashMap<>();
         Map<Integer, Integer> count = new HashMap<>();

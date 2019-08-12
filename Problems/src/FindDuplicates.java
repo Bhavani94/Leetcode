@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindDuplicates {
-    public static List<Integer> findDuplicates(int[] nums) {
+    private static List<Integer> findDuplicates(int[] nums) {
         if(nums == null || nums.length == 0)
             return new ArrayList<>();
         List<Integer> ans = new ArrayList<>();

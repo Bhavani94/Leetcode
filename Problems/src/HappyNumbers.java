@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class HappyNumbers {
-    public static boolean isHappy(int n) {
+    private static boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
         int num = n;
         int sum;

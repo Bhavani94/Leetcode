@@ -46,6 +46,7 @@ public class CoinChange {
    }
 
    public static void main(String[] args) {
+      System.out.println(coinChangeBackTracking(new int[]{1 ,2}, 2));
       System.out.println(coinChange(new int[]{1 ,2, 5, 6}, 11));
       System.out.println(coinChangeBackTracking(new int[]{1 ,2, 5, 6}, 11));
    }

@@ -9,8 +9,10 @@ public class InsertInterval {
 
       List<int[]> list = new ArrayList<>();
       for(int i = 0; i < intervals.length; i++) {
+         // non-overlap current starts later
          if(newInterval == null || intervals[i][1] < newInterval[0])
             list.add(intervals[i]);
+         // non-overlap current interval completed
          else if(intervals[i][0] > newInterval[1]) {
             list.add(newInterval);
             newInterval = null;

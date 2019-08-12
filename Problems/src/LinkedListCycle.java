@@ -1,5 +1,5 @@
 public class LinkedListCycle {
-    public static boolean hasCycle(ListNode head) {
+    private static boolean hasCycle(ListNode head) {
         if(head == null || head.next == null)
             return false;
 
@@ -15,7 +15,7 @@ public class LinkedListCycle {
         return true;
     }
 
-    public static ListNode detectCycle(ListNode head) {
+    private static ListNode detectCycle(ListNode head) {
         if(head == null || head.next == null)
             return null;
         boolean hasCycle = false;

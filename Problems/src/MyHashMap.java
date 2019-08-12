@@ -14,11 +14,11 @@ public class MyHashMap {
     */
    public void put(int key, int value) {
       int index = getHashKey(key);
-      Node prev = findElement(index, key);
-      if (prev.next == null)
-         prev.next = new Node(key, value);
+      Node node = findElement(index, key);
+      if (node.next == null)
+         node.next = new Node(key, value);
       else
-         prev.next.value = value;
+         node.next.value = value;
    }
 
    /**
@@ -42,11 +42,11 @@ public class MyHashMap {
       if (bucket[index] == null) {
          bucket[index] = new Node(-1, -1);
       }
-      Node prev = bucket[index];
-      while (prev.next != null && prev.next.key != key) {
-         prev = prev.next;
+      Node node = bucket[index];
+      while (node.next != null && node.next.key != key) {
+         node = node.next;
       }
-      return prev;
+      return node;
    }
 
    private class Node {

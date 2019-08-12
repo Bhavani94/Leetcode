@@ -1,5 +1,5 @@
 public class MaxSubArray {
-    public static int maxSubArray(int[] nums) {
+    private static int maxSubArray(int[] nums) {
         int tempMax = nums[0];
         int max = nums[0];
         for(int i = 1; i < nums.length; i++){
